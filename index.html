@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css" media="screen,projection">
+		<link rel="stylesheet" href="index.css">
+		<title>Place Autocomplete Address Form</title>
+	</head>
+	<body>
+	<legend>Datos domiciliarios</legend>
+	<form class="">
+		<div class="row">
+			<div class="col s6">
+				<h3>Special title treatment</h3>
+				<p>Quiero ingresar mi dirección manualmente.</p>
+				<input id="autocomplete" placeholder="Enter your address" type="text" style="width: 100%; margin-bottom: 20px;"/>
+				<div class="row">
+					<div class="input-field col s12">
+						<input id="postal_code" />
+						<label for="postal_code">Zip code</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="input-field col s6">
+						<input class="validate" id="route"/>
+						<label for="route">Dirección</label>
+					</div>
+					<div class="input-field col s6">
+						<input class="validate" id="street_number" />
+						<label for="street_number">N°</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="input-field col s4">
+						<input class="validate" id="locality"/>
+						<label for="locality">Distrito</label>
+					</div>
+					<div class="input-field col s4">
+						<input class="validate" id="administrative_area_level_1"/>
+						<label for="administrative_area_level_1">Departamento/Provincia</label>
+					</div>
+					<div class="input-field col s4">
+						<input class="validate" id="country"/>
+						<label for="country">País</label>
+					</div>
+				</div>
+			</div>
+			<div class="col s6">
+				<h3>Special title treatment</h3>
+				<div class="col-sm-12" style="margin-bottom: 20px;">
+					<p style="display: inline-block;">Quiero que google me geolocalice.</p>
+					<button id="encuentrame" class="btn btn-primary">Encuentrame</button>
+				</div>
+				<div class="col-sm-12" style="margin-bottom: 20px;">
+					<input id="placeSaved" type="text" style="width: 100%;">
+				</div>
+				<div class="col-sm-12">
+					<div id="map" style="height: 400px; width: 100%"></div>
+				</div>
+			</div>
+		</div>
+	</form>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+		<script src="app.js" type="text/javascript"></script>
+		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAhL60w1feaFPqmrdbMrrkw1m0PR9Htyxc&libraries=places&callback=initAutocomplete"></script>
+	</body>
+</html>
